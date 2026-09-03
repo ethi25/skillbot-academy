@@ -1,0 +1,18 @@
+﻿# Environment Variables & API Keys (SECURITY)
+config.env
+.env
+*.env
+
+# Virtual Environment
+chatbot_venv/
+venv/
+ENV/
+
+# Python Caches
+__pycache__/
+*.py[cod]
+
+# IDE
+.vscode/
+.idea/
+*.code-workspace
