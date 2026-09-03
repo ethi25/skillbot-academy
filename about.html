@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style3.css">
+    <title>SkillBot Academy - About Us</title>
+</head>
+
+<body>
+    <nav>
+        <a href="index.html" class="logo">SkillBot Academy</a>
+        <div class="links">
+            <a href="index.html" id="home-link">Home</a>
+            <a href="chatbot.html" id="chatbot-link">Chatbot</a>
+            <a href="about.html" class="active">About Us</a>
+        </div>
+        <div class="profile">
+            <img src="assets/profile-icon.png" alt="Profile" class="profile-icon">
+            <span class="profile-name">Krishna</span>
+        </div>
+    </nav>
+
+    <header>
+        <div class="heading">
+            <h1>SkillBot Academy</h1>
+            <p>At SkillBot Academy, we strive to enhance learning experiences through technology and personalized guidance.</p>
+        </div>
+    </header>
+
+    <section class="about-content">
+        <h2>Our Mission</h2>
+        <p>To empower learners by providing accessible and adaptive learning solutions tailored to individual needs.</p>
+
+        <h2>Our Vision</h2>
+        <p>To be a leading platform in transforming how education is delivered and experienced.</p>
+
+        <h2>About SkillBot</h2>
+        <p>
+            SkillBot is designed to revolutionize the way individuals approach learning and skill development.
+        </p>
+    </section>
+
+    <footer>
+        <h3>Refine, Explore & Develop Essential Skills</h3>
+        <div class="right">
+            <div class="links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Cooperation</a>
+                <a href="#">Sponsorship</a>
+                <a href="#">Contact Us</a>
+            </div>
+            <div class="social">
+                <i class='bx bxl-instagram'></i>
+                <i class='bx bxl-facebook-square'></i>
+                <i class='bx bxl-github'></i>
+            </div>
+            <p>Copyright © 2024 SkillBot Academy, All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Redirect to home page and allow navigation back to the previous page
+        document.getElementById("home-link").addEventListener("click", function (e) {
+            e.preventDefault();
+            window.location.href = "index.html"; 
+            window.history.pushState({}, "Home", "index.html");
+        });
+
+        // Redirect to chatbot page and allow navigation back to the previous page
+        document.getElementById("chatbot-link").addEventListener("click", function (e) {
+            e.preventDefault();
+            window.location.href = "chatbot.html";
+            window.history.pushState({}, "Chatbot", "chatbot.html");
+        });
+
+        // Handle going back to the previous page
+        window.addEventListener("popstate", function (event) {
+            window.history.back();
+        });
+    </script>
+
+</body>
+
+</html>

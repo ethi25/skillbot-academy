@@ -1,0 +1,88 @@
+/* Chat interface container */
+.chat-interface {
+    width: 80vw;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.messages {
+    height: 400px;
+    padding: 20px;
+    overflow-y: auto;
+    background-color: #f4f6f9;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+.input-area {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    background-color: transparent;
+}
+
+.chat-input {
+    flex: 1;
+    padding: 15px;
+    border: none;
+    border-radius: 20px;
+    background-color: #e9ecef;
+    font-size: 16px;
+    font-family: 'Segoe UI', sans-serif;
+    outline: none;
+    margin-right: 15px;
+}
+
+.send-button {
+    padding: 12px 25px;
+    border: none;
+    background-color: #000;
+    color: white;
+    font-size: 16px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.send-button:hover {
+    background-color: #0056b3;
+}
+
+/* Message styles */
+.message {
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 70%;
+    word-wrap: break-word;
+}
+
+.user-message {
+    align-self: flex-end;
+    background-color: #d1e7dd;
+}
+
+.bot-message {
+    align-self: flex-start;
+    background-color: #f8d7da;
+}
+
+/* Auto-scroll behavior */
+.messages {
+    scroll-behavior: smooth;
+}
+
+.messages::-webkit-scrollbar {
+    width: 6px;
+}
+
+.messages::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 3px;
+}
